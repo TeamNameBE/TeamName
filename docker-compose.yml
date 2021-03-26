@@ -3,7 +3,7 @@ version: "3.7"
 services:
   web:
     build:
-      context: ./web
+      context: ./
     command: gunicorn main:app -b 0.0.0.0:8000
     # env_file:
     #   - ./.env
@@ -12,8 +12,6 @@ services:
       - media_volume:/home/site/web/static/media
     expose:
       - 8000
-    depends_on:
-      - redis
     networks:
       - private
 
