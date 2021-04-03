@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="px-36 py-10 grid grid-flow-row grid-cols-5 gap-4">
+    <div onclick="vive_print('lol');" class="text-center bg-gray-300 border-4 rounded-xl border-green-500 p-4 hover:bg-green-400">
+        <h1 class="font-bold"> title </h1>
+        <h2 class="font-medium"> 50 </h2>
+    </div>
+    <div class="justify-items-stretch bg-gray-300 border-2 rounded-xl border-green-500">2</div>
+    <div class="justify-items-stretch bg-gray-300 border-2 rounded-xl border-green-500">3</div>
+    <div class="justify-items-stretch bg-gray-300 border-2 rounded-xl border-green-500">4</div>
+    <div class="justify-items-stretch bg-gray-300 border-2 rounded-xl border-green-500">5</div>
+    <div class="justify-items-stretch bg-gray-300 border-2 rounded-xl border-green-500">6</div>
+    <div class="justify-items-stretch bg-gray-300 border-2 rounded-xl border-green-500">7</div>
+    <div class="justify-items-stretch bg-gray-300 border-2 rounded-xl border-green-500">8</div>
+    <div class="justify-items-stretch bg-gray-300 border-2 rounded-xl border-green-500">9</div>
+</div>
+
+<div class="hidden fixed top-0 bg-black bg-opacity-70 w-full h-full justify-center" id="modal">
+    <div class="text-center bg-white border-3 rounded-xl border-green-500 p-4 absolute top-1/4 w-1/4">
+        <h1 class="font-bold"> title </h1>
+        <h2 class="font-medium"> 50 </h2>
+        <p class="text-center text-sm"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras magna est, ultricies
+            sit amet justo id, laoreet consequat tellus. Phasellus iaculis erat erat, non vestibulum tellus auctor eu.
+            Pellentesque pharetra aliquam turpis a egestas. Phasellus vulputate accumsan tellus, ac vulputate nunc rhoncus
+            eget. Pellentesque in mauris nec quam auctor aliquet eget ac purus </p> <br>
+        <button id="myBtn" class="px-6 py-3 text-white font-semibold bg-green-700 rounded-md"> Validate </button>
+    </div>
+</div>
+{% endblock %}
+
+{% block script %}
+<script>
+    function vive_print(print) {
+        var modal = document.getElementById("modal");
+        modal.style.display = "flex";
+    };
+
+    var btn = document.getElementById("myBtn");
+    btn.onclick = function close() {
+        var modal = document.getElementById("modal");
+        modal.style.display = "none";
+    };
+</script>
+{% endblock %}
