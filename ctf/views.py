@@ -1,8 +1,8 @@
 from django.shortcuts import render
 
 
-def index(request):
-    return render(request, "test.html")
+def challenges(request):
+    return render(request, "challenges.html")
 
 
 def calendar(request):
