@@ -1,4 +1,4 @@
 ve/
 __pycache__/
-static/
+/static/
 db.sqlite3
